@@ -160,7 +160,7 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
     }
 
     focusField = (index: number) => {
-        if (index < this.fields.length) {
+        if (index < this.fields.length && this.fields[index]) {
             (this.fields[index] as TextInput).focus();
             this.setState({
                 selectedIndex: index
